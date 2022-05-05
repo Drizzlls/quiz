@@ -157,7 +157,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _first'
             answer.innerHTML = `
-                <input type="text" name="1" class="answer__content"></input>
+                <input type="text" name="1" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -275,7 +275,7 @@ window.addEventListener('load', () => {
 
                 answer.className = 'body-content__answer answer _second'
                 answer.innerHTML = `
-                <input type="text" name="2" class="answer__content"></div>
+                <input type="text" name="2" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
                 answer.querySelector('.answer__content').value = clientText
@@ -373,7 +373,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _third'
             answer.innerHTML = `
-                <input type="text" name="3" class="answer__content"></input>
+                <input type="text" name="3" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -470,7 +470,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _fourth'
             answer.innerHTML = `
-                <div class="answer__content"></div>
+                <input type="text"  name="4" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -568,7 +568,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _fifth'
             answer.innerHTML = `
-                <input type="text"  name="4" class="answer__content"></input>
+                <input type="text"  name="5" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -666,7 +666,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _sixth'
             answer.innerHTML = `
-                <input type="text" name="5" class="answer__content"></input>
+                <input type="text" name="6" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -764,7 +764,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _seventh'
             answer.innerHTML = `
-                <input type="text" name="6" class="answer__content"></input>
+                <input type="text" name="7" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -860,7 +860,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _eighth'
             answer.innerHTML = `
-                <input type="text" name="7" class="answer__content"></input>
+                <input type="text" name="8" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -2107,7 +2107,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _ninth'
             answer.innerHTML = `
-                <input type="text" name="8" class="answer__content"></input>
+                <input type="text" name="9" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -2205,7 +2205,7 @@ window.addEventListener('load', () => {
 
             answer.className = 'body-content__answer answer _tenth'
             answer.innerHTML = `
-                <input type="text" name="9" class="answer__content"></input>
+                <input type="text" name="10" class="answer__content" readonly></input>
                 <div class="answer__user"></div>
             `
             answer.querySelector('.answer__content').value = clientText
@@ -2307,18 +2307,9 @@ window.addEventListener('load', () => {
                         let askForm = document.createElement('div')
                         askForm.className = 'ask__form _ns'
                         askForm.innerHTML = `
-                            <input onchange="editcontact(this)" data="name" type="text" class="ask__field mb-1" placeholder="ФИО">
-                            <input id="inputemail" onchange="editcontact(this)" data="email" type="email" class="ask__field mb-2" placeholder="Email">
-                            <label onclick="agree()" class="ask__label-wrapper mb-1_5">
-                                <label class="ask__label">
-                                    <input id="agreecheckbox" checked type="checkbox" class="ask__label-input sr-only">
-                                    <p class="ask__checkbox"></p>
-                                </label>
-                                <p class="ask__label-text">
-                                    С
-                                    <a class="ask__label-link" href="javascript:void(0)" onclick="$('#politic').toggle(300)">политикой конфеденциальности</a>
-                                    ознакомлен(а)
-                                </p>
+                            <input onchange="editcontact(this)" type="text" class="ask__field mb-1" placeholder="ФИО" name="FIO" required>
+                            <input id="inputephone" onchange="editcontact(this)" data="phone" type="phone" class="ask__field mb-2" placeholder="Номер телефона" name="Phone" required>
+                            <input id="inputemail" onchange="editcontact(this)" data="email" type="email" class="ask__field mb-2" placeholder="Email" name="email" required>
                             </label>
                             <button type="submit" id="finishbt" class="ask__form-btn _ns">Узнать результат</button>
                         `
@@ -2347,42 +2338,3 @@ window.addEventListener('load', () => {
         }
     })
 })
-//function send(el) {
-//    $(el).attr('onclick','')
-//    $.ajax({
-//        type: 'POST',
-//        url: '/',
-//        data: 'action='+'finish',
-//        success: function(html){
-//            $('#result').html(html)
-//        }
-//    });
-//}
-//function agree() {
-//    if ($('#agreecheckbox').is(':checked')){
-//    	$('#finishbt').css('opacity','1')
-//    	$('#finishbt').attr('onclick','send(this)')
-//    } else {
-//    	$('#finishbt').css('opacity','0.5')
-//    	$('#finishbt').attr('onclick','')
-//    }
-//}
-//function editcontact(el) {
-//    var what = $(el).attr('data')
-//    var value = $(el).val()
-//    $.ajax({
-//        type: 'POST',
-//        url: '/',
-//        data: 'action='+'editcontact'+'&value='+value+'&what='+what,
-//        success: function(html){
-//            if (html == 'error') {
-//                $('.warning').html('Введите корректный<br> Email')
-//                $('.warning').addClass('_active')
-//                $('#inputemail').val('')
-//                setTimeout(function(){
-//                    $('.warning').removeClass('_active')
-//                }, 3000);
-//            }
-//        }
-//    });
-//}

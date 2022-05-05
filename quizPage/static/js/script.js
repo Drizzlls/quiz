@@ -2307,8 +2307,9 @@ window.addEventListener('load', () => {
                         let askForm = document.createElement('div')
                         askForm.className = 'ask__form _ns'
                         askForm.innerHTML = `
-                            <input onchange="editcontact(this)" type="text" class="ask__field mb-1" placeholder="ФИО" name="FIO">
-                            <input id="inputemail" onchange="editcontact(this)" data="phone" type="phone" class="ask__field mb-2" placeholder="Номер телефона" name="Phone">
+                            <input onchange="editcontact(this)" type="text" class="ask__field mb-1" placeholder="ФИО" name="FIO" required>
+                            <input id="inputephone" onchange="editcontact(this)" data="phone" type="phone" class="ask__field mb-2" placeholder="Номер телефона" name="Phone" required>
+                            <input id="inputemail" onchange="editcontact(this)" data="email" type="email" class="ask__field mb-2" placeholder="Email" name="email" required>
                             </label>
                             <button type="submit" id="finishbt" class="ask__form-btn _ns">Узнать результат</button>
                         `
