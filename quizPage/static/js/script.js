@@ -71,7 +71,7 @@ window.addEventListener('load', () => {
             setTimeout(() => {
                 let askText = document.createElement('div')
                 askText.className = 'ask__text mb-2'
-                askText.innerText = 'Здравствуйте! Меня зовут Юлия Викторовна.\n' + 'Я онлайн-консультант  компании Списать-долги.'
+                askText.innerText = 'Здравствуйте! Меня зовут Юлия Викторовна.\n' + 'Я онлайн-консультант  компании Свобода от долгов.'
                 askWriting.insertAdjacentElement('beforebegin', askText)
                 setTimeout(() => {
                     askText.classList.add('_active')

@@ -59,4 +59,8 @@ def thsQuiz(request):
     return render(request, "quizPage/ths.html")
 
 
+def aboutQuiz(request):
+    return render(request, "quizPage/about.html")
+
+
 
